@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
+Route::get('/dashboard', [App\Http\Controllers\EmployeesController::class, 'index']);
+
+Route::get('/sample', [App\Http\Controllers\EmployeesController::class, 'index']);

@@ -45,17 +45,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($employees as $employees)
+
                     <tr>
                     <th scope="col"><input type="checkbox"></th>
-                    <td scope="col">Renzo V. Malubay</td>
-                    <td scope="col">renzomalubay0@gmail.com</td>
-                    <td scope="col">Cabanatuan City</td>
-                    <td scope="col">111 1111-111</td>
+                    <td scope="col">{{ $employees->name }}</td>
+                    <td scope="col">{{ $employees->email }}</td>
+                    <td scope="col">{{ $employees->address }}</td>
+                    <td scope="col">{{ $employees->phone }}</td>
                     <td scope="col">
                         <button><i class="fa-solid fa-pencil" style="color: orange;"></i></button>
                         <button><i class="fa-solid fa-trash" style="color: red;"></i></button> 
                     </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
