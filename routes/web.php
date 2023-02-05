@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+
+Route::get('/register', [App\Http\Controllers\UserController::class, 'register']);
 
 Route::get('/dashboard', [App\Http\Controllers\EmployeesController::class, 'index']);
 
-Route::get('/sample', [App\Http\Controllers\EmployeesController::class, 'index']);
+// Route::get('/sample', [App\Http\Controllers\EmployeesController::class, 'index']);
+Route::post('/store', [App\Http\Controllers\UserController::class, 'store']);
