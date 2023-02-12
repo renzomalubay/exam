@@ -20,6 +20,7 @@
             <div>
                 <button class="btn btn-danger"><i class="fa-solid fa-square-minus"></i> Delete</button>
                 <button class="btn btn-success"><i class="fa-solid fa-square-plus"></i> Add New Employee</button>
+                <a href="{{route('logout')}}"><button class="btn btn-danger">logout</button></a> 
             </div>
         </div>
         <div class="container bg-white">

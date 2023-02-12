@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 
 Route::get('/register', [App\Http\Controllers\UserController::class, 'register']);
+Route::post('/login', [App\Http\Controllers\UserController::class, 'authenticate'])->name('login');
+Route::get('/login', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [App\Http\Controllers\EmployeesController::class, 'index']);
 
