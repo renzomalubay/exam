@@ -28,6 +28,7 @@ class UserController extends Controller
         $validated['password'] = bcrypt($validated['password']);
 
         $users = Users::create($validated);
+        return view('login');
 
         // auth()->login($users);
 
